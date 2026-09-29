@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mòduls i codi · Pipedrive</title>
-<meta name="description" content="Els tres mòduls principals de Pipedrive, com crear-ne de nous amb l'API i un exemple de codi." />
+<title>Pipedrive · Estudi d'un SGE de tipus CRM</title>
+<meta name="description" content="Treball sobre Pipedrive: què és, història, arquitectura, plataformes i fitxa tècnica d'aquest CRM al núvol." />
 <meta name="theme-color" content="#f5f3ee" />
-<meta property="og:title" content="Mòduls i codi · Pipedrive" />
-<meta property="og:description" content="Els tres mòduls principals de Pipedrive, com crear-ne de nous amb l'API i un exemple de codi." />
+<meta property="og:title" content="Pipedrive · Estudi d'un SGE de tipus CRM" />
+<meta property="og:description" content="Treball sobre Pipedrive: què és, història, arquitectura, plataformes i fitxa tècnica d'aquest CRM al núvol." />
 <meta property="og:type" content="website" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23017737'/%3E%3Ctext x='16' y='24' font-family='Arial,sans-serif' font-weight='700' font-size='22' fill='%23fff' text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,21 +22,31 @@
     <a class="marca" href="/">pipedrive<span>.</span><small>Estudi d'un SGE</small></a>
     <input class="menu-casella" type="checkbox" id="menu" aria-label="Obrir menú" />
     <label class="menu-boto" for="menu"><i></i><i></i><i></i></label>
-    <nav class="nav" aria-label="Principal"><a href="/">Inici</a><a href="/preus">Llicències i preus</a><a href="/moduls" aria-current="page">Mòduls i codi</a><a href="/comparativa">Comparativa</a></nav>
+    <nav class="nav" aria-label="Principal"><a href="/" aria-current="page">Inici</a><a href="/preus">Llicències i preus</a><a href="/moduls">Mòduls i codi</a><a href="/comparativa">Comparativa</a></nav>
   </div>
 </header>
 <main id="principal">
-<section class="seccio seccio--cenyida"><div class="contenidor">
-<p class="rotol entra" style="--i:0">Mòduls i funcionalitats</p><h1 class="entra" style="--i:1">Tres peces<br />que <em>mouen</em> tot</h1>
-<p class="entradeta entra" style="--i:2">Els tres mòduls més importants de Pipedrive.</p></div></section>
-<section class="seccio seccio--cenyida" style="padding-top:0"><div class="contenidor"><div class="moduls revela"><article class="modul"><span class="modul__num">01</span><h3>Gestió de vendes</h3><p>Gestiona leads i oportunitats mitjançant un pipeline visual.</p></article><article class="modul"><span class="modul__num">02</span><h3>Gestió de contactes</h3><p>Clients, empreses, contactes, activitats i oportunitats en un mateix sistema.</p></article><article class="modul"><span class="modul__num">03</span><h3>Automatització i informes</h3><p>Automatitza tasques comercials i crea informes i estadístiques. Els plans superiors n'afegeixen més.</p></article></div></div></section>
-<section class="seccio seccio--paper"><div class="contenidor dues-columnes revela"><div><p class="rotol">Ampliar el sistema</p><h2>Nous mòduls<br />via API</h2>
-<p style="margin-top:1.25rem;color:var(--tinta-70)">Es poden crear aplicacions i integracions mitjançant l'API i els webhooks. La documentació oficial indica que l'API cobreix gran part de les funcionalitats del producte.</p>
-<p style="margin-top:1.25rem"><b>Llenguatges:</b> JavaScript / TypeScript, Node.js, PHP, Python, Java, C#, entre d'altres.</p></div>
-<div><pre class="codi"><code>fetch("https://api.pipedrive.com/v1/persons?api_token=API_KEY")
-  .then(response =&gt; response.json())
-  .then(data =&gt; console.log(data));</code></pre><p class="rotol" style="margin:1.75rem 0 .75rem">Eines de desenvolupament</p>
-<ul class="etiquetes"><li>Visual Studio Code</li><li>Postman</li><li>Node.js</li><li>Git</li></ul></div></div></section>
+<section class="portada"><div class="contenidor">
+<p class="rotol entra" style="--i:0">SGE · CRM al núvol</p>
+<h1 class="portada__titol entra" style="--i:1">Tota la venda,<br />en <em>un</em> embut</h1>
+<div class="portada__cos">
+<div class="entra" style="--i:2">
+<p class="entradeta">Pipedrive és un CRM que ajuda les empreses a gestionar clients, contactes i vendes. Organitza les oportunitats en un <strong>pipeline visual</strong>, automatitza tasques i genera informes.</p>
+<div class="portada__peu"><a class="boto" href="/preus">Llicències i preus</a><a class="enllac" href="/moduls">Mòduls i codi</a></div></div>
+<div class="pipeline entra" style="--i:3" role="img" aria-label="Exemple de pipeline de vendes amb quatre etapes: lead, contactat, proposta i guanyat"><div class="etapa"><h3>Lead<small>Nou contacte</small></h3><div class="fitxa">Lluc Font · web</div><div class="fitxa">Aina Serra · fira</div></div><div class="etapa"><h3>Contactat<small>Primera trucada</small></h3><div class="fitxa">Òptica Mar · 1.200 €</div></div><div class="etapa"><h3>Proposta<small>Oferta enviada</small></h3><div class="fitxa">Gestoria Roca · 3.400 €</div><div class="fitxa">Bar Nord · 780 €</div></div><div class="etapa"><h3>Guanyat<small>Tancat</small></h3><div class="fitxa">Taller Riba · 2.150 €</div></div></div>
+</div></div></section>
+<section class="seccio"><div class="contenidor dues-columnes revela">
+<div><p class="rotol">Introducció</p><h2>Què és un SGE?</h2></div>
+<div><p class="entradeta">Un Sistema de Gestió Empresarial és el programari que centralitza els processos d'una empresa: vendes, clients, compres, comptabilitat, inventari…</p>
+<p style="margin-top:1.25rem;color:var(--tinta-70)">Segons la funció, es classifiquen en <b>ERP</b> (gestió integral), <b>CRM</b> (relació amb el client) o <b>BI</b> (anàlisi de dades). El que hem triat és <b>Pipedrive</b>, un <b>CRM</b> orientat a equips comercials, distribuït com a SaaS: s'utilitza des del navegador i des del mòbil.</p></div>
+</div></section>
+<section class="seccio seccio--paper"><div class="contenidor dues-columnes revela">
+<div><p class="rotol">Informació general</p><h2>Fitxa tècnica</h2><p style="margin-top:1.25rem;color:var(--tinta-70)">La versió estable és la publicada com a servei al núvol: el client sempre treballa amb l'última.</p></div>
+<dl class="fitxa-tecnica"><div><dt>Tipus</dt><dd>CRM (Customer Relationship Management)</dd></div><div><dt>Fundadors</dt><dd>Timo Rein, Urmas Purde, Ragnar Sass, Martin Henk i Martin Tajur</dd></div><div><dt>Primera versió</dt><dd>2010</dd></div><div><dt>Backend</dt><dd>Node.js + TypeScript</dd></div><div><dt>Frontend</dt><dd>React</dd></div><div><dt>Altres components</dt><dd>PHP i Go</dd></div><div><dt>API</dt><dd>RESTful</dd></div><div><dt>Autenticació</dt><dd>OAuth 2.0 i API tokens</dd></div><div><dt>Plataformes</dt><dd>Web al núvol: no depèn del sistema operatiu (Windows, macOS, Linux)</dd></div></dl></div></section>
+<section class="seccio"><div class="contenidor"><div class="encap revela"><div><p class="rotol">Història</p><h2>Cronologia</h2></div></div>
+<ol class="cronologia revela"><li><b>2010</b><p>Es funda a Tallinn (Estònia) com a <em>Growty</em>. La primera versió es programa en una casa d'estiueig, amb un equip molt petit.</p></li><li><b>2011</b><p>Passa per l'acceleradora AngelPad i tanca l'any amb uns 300 clients.</p></li><li><b>2013</b><p>Ja té gairebé 7.000 clients.</p></li><li><b>2020</b><p>Vista Equity Partners n'és l'inversor majoritari i la valoració la converteix en unicorn.</p></li><li><b>2022</b><p>Supera les 100.000 empreses usuàries.</p></li><li><b>Avui</b><p>Plataforma CRM al núvol amb API, automatització, integracions i funcions d'IA.</p></li></ol></div></section>
+<section class="seccio seccio--tinta"><div class="contenidor tancament revela"><div><p class="rotol">Següent</p><h2>Quant costa<br />i com s'instal·la?</h2></div>
+<div><p class="entradeta" style="margin-bottom:2rem">Quatre plans, 14 dies de prova i cap instal·lador: és un servei al núvol.</p><a class="boto" href="/preus">Veure els plans</a></div></div></section>
 </main>
 <footer class="peu">
   <div class="contenidor peu__fila">
