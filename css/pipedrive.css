@@ -1,0 +1,100 @@
+/* 1 · TOKENS */
+:root{--fons:#f5f3ee;--paper:#ebe8df;--tinta:#141816;--tinta-70:rgba(20,24,22,.72);--linia:rgba(20,24,22,.16);--verd:#017737;--verd-cl:#7be0a4;
+--display:"Bricolage Grotesque",system-ui,sans-serif;--text:"Instrument Sans",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;--w:72rem}
+/* 2 · BASE */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--fons);color:var(--tinta);font:400 1.0625rem/1.6 var(--text);-webkit-font-smoothing:antialiased}
+a{color:inherit}ul,ol{margin:0;padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--verd);outline-offset:3px}
+.contenidor{width:min(100% - 2.5rem,var(--w));margin-inline:auto}
+.salt-enllac{position:absolute;left:1rem;top:-4rem;background:var(--tinta);color:#fff;padding:.6rem 1rem;z-index:99}.salt-enllac:focus{top:1rem}
+/* 3 · TIPOGRAFIA */
+h1,h2,h3{font-family:var(--display);line-height:1;margin:0;letter-spacing:-.03em}
+h1{font-size:clamp(2.8rem,1.5rem + 6vw,6rem);font-weight:800}
+h2{font-size:clamp(2rem,1.2rem + 3vw,3.6rem);font-weight:700}
+h3{font-size:1.3rem;font-weight:700;letter-spacing:-.02em}
+em{font-style:normal;color:var(--verd)}
+.rotol{font:500 .75rem/1 var(--mono);text-transform:uppercase;letter-spacing:.14em;color:var(--verd);margin:0 0 1.25rem}
+.entradeta{font-size:clamp(1.15rem,1rem + .7vw,1.5rem);line-height:1.4;margin:0;max-width:34ch}
+.enllac{font:500 .8rem var(--mono);text-transform:uppercase;letter-spacing:.1em;text-decoration:none;border-bottom:1.5px solid var(--verd);padding-bottom:.2rem}
+.boto{display:inline-block;background:var(--verd);color:#fff;text-decoration:none;font-weight:600;padding:.9rem 1.5rem;border-radius:.4rem;transition:transform .2s}
+.boto:hover{transform:translateY(-2px)}
+/* 4 · CAPÇALERA */
+.capcalera{position:sticky;top:0;z-index:50;background:rgba(245,243,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--linia)}
+.capcalera__fila{display:flex;align-items:center;justify-content:space-between;min-height:4.5rem;gap:1rem}
+.marca{font:800 1.5rem/1 var(--display);letter-spacing:-.04em;text-decoration:none;display:inline-flex;flex-direction:column}
+.marca span{color:var(--verd)}
+.marca small{font:400 .62rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-70);margin-top:.3rem}
+.nav{display:flex;gap:1.75rem;font-weight:500;font-size:.95rem}
+.nav a{text-decoration:none;padding:.3rem 0;border-bottom:2px solid transparent}
+.nav a:hover,.nav a[aria-current]{border-color:var(--verd)}
+.menu-casella{position:absolute;opacity:0;pointer-events:none}.menu-boto{display:none;cursor:pointer;width:2.5rem;height:2.5rem;flex-direction:column;justify-content:center;gap:.35rem;align-items:center}
+.menu-boto i{width:1.5rem;height:2px;background:var(--tinta)}
+/* 5 · BLOCS */
+.seccio{padding:clamp(4rem,9vw,8rem) 0}.seccio--cenyida{padding:clamp(3rem,6vw,5rem) 0}
+.seccio--paper{background:var(--paper)}.seccio--tinta{background:var(--tinta);color:var(--fons)}
+.seccio--tinta .rotol,.seccio--tinta em{color:var(--verd-cl)}.seccio--tinta .boto{background:var(--verd-cl);color:var(--tinta)}
+.dues-columnes{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2rem,6vw,6rem);align-items:start}
+.encap{margin-bottom:clamp(2rem,4vw,3.5rem)}
+.tancament{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end}
+.graella{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linia);border:1px solid var(--linia)}.graella--3{grid-template-columns:repeat(3,1fr)}
+.targeta{background:var(--fons);padding:1.75rem}.seccio--paper .targeta{background:var(--paper)}.targeta h3{margin-bottom:.75rem}.targeta p{margin:0;color:var(--tinta-70);font-size:.98rem}
+.portada{padding:clamp(3rem,7vw,6rem) 0 clamp(4rem,8vw,7rem)}.portada__cos{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(2rem,5vw,5rem);margin-top:clamp(2rem,5vw,4rem);align-items:center}
+.portada__peu{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;margin-top:2rem}
+/* pipeline decoratiu */
+.pipeline{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;background:var(--paper);padding:.8rem;border-radius:.6rem;border:1px solid var(--linia);transform:rotate(1.2deg)}
+.etapa{background:var(--fons);border-radius:.4rem;padding:.6rem;min-height:14rem}
+.etapa h3{font:600 .8rem var(--display);letter-spacing:0;padding-bottom:.6rem;border-bottom:3px solid var(--verd);margin-bottom:.6rem}
+.etapa h3 small{display:block;font:400 .6rem var(--mono);color:var(--tinta-70);margin-top:.2rem}
+.etapa:nth-child(4) h3{border-color:var(--tinta)}
+.fitxa{background:#fff;border:1px solid var(--linia);border-left:3px solid var(--verd);border-radius:.25rem;padding:.55rem .6rem;font-size:.72rem;line-height:1.3;margin-bottom:.5rem;box-shadow:0 1px 0 var(--linia)}
+/* fitxa tècnica / cronologia */
+.fitxa-tecnica{margin:0}.fitxa-tecnica div{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--linia)}
+.fitxa-tecnica dt{font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--tinta-70);padding-top:.25rem}.fitxa-tecnica dd{margin:0;font-weight:500}
+.cronologia{border-left:2px solid var(--verd);margin-left:.4rem}
+.cronologia li{display:grid;grid-template-columns:7rem 1fr;gap:1rem;padding:0 0 2.25rem 2rem;position:relative}
+.cronologia li::before{content:"";position:absolute;left:-.55rem;top:.5rem;width:.9rem;height:.9rem;border-radius:50%;background:var(--fons);border:3px solid var(--verd)}
+.cronologia b{font:800 clamp(1.5rem,1rem + 2vw,2.4rem)/1 var(--display);letter-spacing:-.03em}.cronologia p{margin:.2rem 0 0;max-width:52ch;color:var(--tinta-70)}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.pla{border:1px solid var(--linia);border-radius:.6rem;padding:1.75rem;position:relative;background:#fff}
+.pla--dest{background:var(--tinta);color:var(--fons);transform:translateY(-.75rem)}
+.pastilla{position:absolute;top:-.7rem;right:1rem;background:var(--verd-cl);color:var(--tinta);font:600 .68rem var(--mono);text-transform:uppercase;letter-spacing:.08em;padding:.3rem .6rem;border-radius:2rem}
+.pla__preu{font:800 3.6rem/1 var(--display);letter-spacing:-.05em;margin:1.5rem 0 .2rem}.pla__preu small{font:400 .8rem var(--mono);letter-spacing:0;margin-left:.3rem}
+.pla__nota{margin:0;font:400 .72rem var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--verd)}.pla--dest .pla__nota{color:var(--verd-cl)}
+.pla__men{margin:1.25rem 0 0;padding-top:1rem;border-top:1px solid var(--linia);font-size:.9rem;opacity:.8}
+.passos{counter-reset:p}.passos li{counter-increment:p;display:flex;gap:1.25rem;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--linia);font-size:1.15rem;font-weight:500}
+.passos li::before{content:counter(p,decimal-leading-zero);font:500 .8rem var(--mono);color:var(--verd)}
+/* mòduls i codi */
+.moduls{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}.modul{border-top:3px solid var(--verd);padding-top:1.25rem}
+.modul__num{font:500 .8rem var(--mono);color:var(--verd)}.modul h3{font-size:1.7rem;margin:1rem 0 .75rem}.modul p{color:var(--tinta-70);margin:0}
+.codi{margin:0;background:var(--tinta);color:var(--verd-cl);padding:1.5rem;border-radius:.5rem;overflow-x:auto;font:400 .85rem/1.7 var(--mono)}
+.etiquetes{display:flex;flex-wrap:wrap;gap:.5rem}.etiquetes li{border:1px solid var(--tinta);border-radius:2rem;padding:.35rem .9rem;font:500 .78rem var(--mono)}
+/* comparativa */
+.taula-marc{overflow-x:auto;border:1px solid var(--linia);border-radius:.5rem;background:#fff}
+.taula{width:100%;border-collapse:collapse;min-width:36rem}.taula th,.taula td{text-align:left;padding:1rem 1.25rem;border-bottom:1px solid var(--linia)}
+.taula thead th{font:600 .75rem var(--mono);text-transform:uppercase;letter-spacing:.1em;background:var(--paper)}
+.taula tbody th{font-weight:600}.taula tr:last-child>*{border-bottom:0}
+.taula--comp td:nth-child(2),.taula--comp thead th:nth-child(2){background:rgba(1,119,55,.08);font-weight:600}
+.llista-linies li{font:600 1.35rem var(--display);letter-spacing:-.02em;padding:1rem 0;border-bottom:1px solid var(--linia)}
+.pros-contres{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}.pc{padding:2rem;border-radius:.6rem;border:1px solid var(--linia)}
+.pc--pro{background:rgba(1,119,55,.07);border-color:rgba(1,119,55,.3)}.pc h3{font-size:1.6rem;margin-bottom:1rem}
+.pc li{padding:.5rem 0 .5rem 1.6rem;position:relative}.pc li::before{position:absolute;left:0;font-weight:700}
+.pc--pro li::before{content:"+";color:var(--verd)}.pc--con li::before{content:"−";color:#a1341f}
+.fonts li{padding:.6rem 0;border-bottom:1px solid rgba(245,243,238,.2);font:400 .85rem var(--mono);overflow-wrap:anywhere}.fonts a{color:var(--verd-cl)}
+/* 6 · PEU */
+.peu{border-top:1px solid var(--linia);padding:2.5rem 0}.peu__fila{display:flex;flex-wrap:wrap;gap:1.5rem 3rem;justify-content:space-between;align-items:center}
+.peu ul{display:flex;gap:1.5rem;font-size:.9rem}.peu a{text-decoration:none}.peu a:hover{text-decoration:underline}.peu__legal{font:400 .72rem var(--mono);color:var(--tinta-70);margin:0;width:100%}
+/* 7 · ANIMACIÓ */
+@keyframes entra{from{opacity:0;transform:translateY(1.25rem)}to{opacity:1;transform:none}}
+.entra{animation:entra .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i,0)*90ms)}
+@supports (animation-timeline:view()){.revela{animation:entra linear both;animation-timeline:view();animation-range:entry 0% entry 35%}}
+@media (prefers-reduced-motion:reduce){.entra,.revela{animation:none}html{scroll-behavior:auto}.boto{transition:none}}
+/* 8 · ADAPTACIÓ */
+@media (max-width:62rem){
+.portada__cos,.dues-columnes,.tancament,.pros-contres,.moduls{grid-template-columns:1fr}
+.graella,.plans{grid-template-columns:1fr 1fr}.graella--3{grid-template-columns:1fr}.pla--dest{transform:none}.pipeline{transform:none}
+.menu-boto{display:flex}.nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--fons);border-bottom:1px solid var(--linia);padding:.5rem 1.25rem 1rem}
+.nav a{padding:.8rem 0}.menu-casella:checked~.nav{display:flex}}
+@media (max-width:36rem){.graella,.plans{grid-template-columns:1fr}.fitxa-tecnica div,.cronologia li{grid-template-columns:1fr;gap:.2rem}.pipeline{grid-template-columns:1fr 1fr}}
